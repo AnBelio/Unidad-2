@@ -1,0 +1,73 @@
+// Utilización de la clase Math para hacer una calculadora que haga raices cuadradas
+// y divisiones y si una operación no es posible lo comunique. Nos permitirá introducir
+// las operaciones mediante un menú, y no terminará hasta que le digamos que lo haga.
+
+import java.util.Scanner;
+
+public class Ejercicio15 {
+
+    public static void main(String[] args) {
+
+        int entrada;
+        int raiz;
+        double resultadoraiz;
+        double dividendo, divisor;
+
+        Scanner sc = new Scanner(System.in);
+
+        do {
+
+            System.out.println("¿Qué operación quieres realizar?\n");
+            System.out.println("Presiona 1 para raíz cuadrada, 2 para una división o 3 para cerrar el programa");
+            entrada = sc.nextInt();
+
+
+            if (entrada == 1) {
+
+                System.out.println("Introduce el valor del que deseas saber la raiz, solo se aceptan números >= a 0: ");
+                raiz = sc.nextInt();
+
+                resultadoraiz = Math.sqrt(raiz);
+
+                if (resultadoraiz > 0) {
+
+                    System.out.printf("El resultado de la raiz es: \n" + "%.2f", resultadoraiz);
+                    System.out.println("\n");
+                } else {
+
+                    System.out.println("La operación no se ha podido realizar, por favor, introduzca un valor positivo.\n");
+
+                }
+
+            } else if (entrada == 2) {
+
+                try {
+
+                    System.out.println("Introduce el dividendo: ");
+                    dividendo = sc.nextDouble();
+
+                    System.out.println("Introduce el divisor: ");
+                    divisor = sc.nextDouble();
+
+                    double division = dividendo / divisor;
+
+                    System.out.println("El resultado de la división es: " + division + "\n");
+
+                } catch (Exception e) {
+
+                    System.out.println("No puede hacerse la división, por favor, introduzca valores enteros. \n");
+
+                }
+            } else if (entrada == 3) {
+
+            } else {
+
+                System.out.println("Por favor, introduce un valor correcto: \n");
+
+            }
+
+        } while (entrada != 3);
+
+        System.out.println("¡Muchas gracias por usar el programa, que tengas un maravilloso día!");
+    }
+}
