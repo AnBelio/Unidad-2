@@ -1,0 +1,42 @@
+//Escribe un programa que solicite al usuario un número N y luego muestre por pantalla la siguiente ejecución:
+//1
+//1 2
+//1 2 3
+//……
+//1 2 3 ….N
+//….
+//1 2 3
+//1 2
+//1
+
+import java.util.Scanner;
+
+public class Ejercicio12{
+
+    public static void main(String[] args){
+
+        int suma;
+
+        System.out.println("Introduce los números que deseas transformar en una piramide invertida: ");
+
+        Scanner sc = new Scanner(System.in);
+        suma = sc.nextInt();
+
+        for (int i= 1; i<= suma; i++){
+
+            for (int j=1; j<=i; j++){
+
+                System.out.print( j + " ");
+
+            }System.out.println();
+
+        }for (int i=suma; i>=0; i--){
+
+            {for(int j=1; j <= i-1;j++)
+
+                System.out.print( j + " ");
+
+            }System.out.println();
+        }
+    }
+}
