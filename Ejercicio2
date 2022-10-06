@@ -1,0 +1,35 @@
+//Escribe un programa que lea del teclado tres números e indique el mayor de ellos.
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int a,b,c;
+
+        System.out.println("Introduce el primer número");
+        a = sc.nextInt();
+
+        System.out.println("Introduce el segundo número");
+        b = sc.nextInt();
+
+        System.out.println("Introduce el tercer número");
+        c = sc.nextInt();
+
+        if (a>b){
+            if (a>c){
+                System.out.println("El número mayor es " +a);
+
+            }else{
+                System.out.println("El número mayor es " + c);
+            }
+        } else if (b>c){
+            System.out.println("El número mayor es " + b);
+
+        }else {
+            System.out.println("El número mayor es " + c);
+        }
+    }
+}
