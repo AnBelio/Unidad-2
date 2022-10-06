@@ -1,0 +1,31 @@
+//Escribe un programa que lea un número entero N mayor que 0 y calcule la suma 1+2+3+4+5+6+...+N
+
+import java.util.Scanner;
+
+public class Ejercicio13 {
+
+    public static void main(String[] args) {
+
+        int i = 1;
+        int numero = 0;
+        int n;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduce un valor ");
+        n = sc.nextInt();
+
+        do {
+
+            System.out.print(" + " + i);
+
+            numero = numero + i;
+            i++;
+
+        } while (i <=n);
+
+        System.out.print(" = " + numero);
+
+
+    }
+}
