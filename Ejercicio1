@@ -1,0 +1,29 @@
+//Escribe un programa que lea un número entero por teclado e indique si es par o impar.
+
+import java.util.Scanner;
+
+public class Ejercicio1Unidad2 {
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escribe un número aleatorio");
+
+        int resto;
+        int entrada;
+
+        entrada = sc.nextInt();
+        resto = entrada%2;
+
+        if (entrada == 0){
+
+            System.out.println("Tú numero es par");
+
+        }else{
+
+            System.out.println("Tú numero es impar");
+        }
+
+    }
+
+}
