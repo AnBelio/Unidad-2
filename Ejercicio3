@@ -1,0 +1,30 @@
+//Escribe un programa que lea del teclado dos números e indique si uno de ellos es múltiplo de otro.
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int a, b;
+
+        System.out.println("Introduce el primer número");
+        a = sc.nextInt();
+
+        System.out.println("Introduce el segundo número");
+        b = sc.nextInt();
+
+        if (a % b == 0) {
+            System.out.println(b + " Es múltiplo de " + a);
+
+        } else if (a % b !=0) {
+            System.out.println(b + " No es múltiplo de " + a);
+        } else if (b % a == 0) {
+            System.out.println(a + " No es múltiplo de " + b);
+
+        } else {
+            System.out.println(a + " Es múltiplo de " + b);
+        }
+    }
+}
